@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/loading.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $({ val: 0 }).animate({ val: 100 }, {
+            duration: 5000,
+            step: function () {
+                $(".progress").text(Math.floor(this.val));
+                $(".progress").css("color", "white");
+            },
+            complete: function () {
+                $(".progress").text(Math.floor(this.val));
+                $(".p").css("color", "white");
+            }
+        });
+    </script>
+
+    <div class="pattern"></div>
+    <section class="round">
+        <div class="img-area">
+            <div class="inner-area">
+                <img src="../image/잔망루피.jpg">
+            </div>
+        </div>
+    </section>
+    <div class="border"></div>
+    <div class="progressbar"></div>
+    <div class="progress">
+        <p>0</p>
+    </div>
+
+    <meta http-equiv="refresh" content="6, url=mainpage.html">
+    </meta>
+</body>
+</meta>
+
+</html>
